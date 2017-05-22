@@ -1,0 +1,10 @@
+
+RewriteEngine on
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^buriani\.co\.ke$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.buriani\.co\.ke$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteRule ^/?$ "https\:\/\/www\.buriani\.co\.ke\/" [R=301,L]
+
