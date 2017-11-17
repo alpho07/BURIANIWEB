@@ -12,8 +12,8 @@ class MY_Controller extends CI_Controller {
     private $_Auth = '';
     private $Mailer = '';
     Private $_SMS = '';
-    private $_smsuser = 'Dindi';
-    private $_smskey = '4824103407c20a26c3dca5b5888b7fffd5f952060ebc07dd59e57d2fde5b9e2d';
+    private $_smsuser = 'JustUser';
+    private $_smskey = 'thepass';
     private $_TNT = '';
     public $fuzzy_prefix_length = 2;
     public $fuzzy_max_expansions = 50;
@@ -36,7 +36,7 @@ class MY_Controller extends CI_Controller {
         $this->Mailer->Port = 465;
         $this->Mailer->SMTPSecure = 'tls';
         $this->Mailer->SMTPAuth = true;
-        $this->ORACOM = "http://107.20.199.106/api/v3/sendsms/plain?user=AOyale&password=Jesus123&sender=ORACOM-KE&SMSText=";
+        $this->ORACOM = "http://107.20.199.106/api/v3/sendsms/plain?user=JustUser&password=Jeustpass&sender=ORACOM-KE&SMSText=";
         $this->Mailer->IsSMTP();
         $this->Mailer->setFrom('info@buriani.co.ke', 'Buriani Agent');
         $this->Mailer->addReplyTo('info@buriani.co.ke', 'Buriani');
